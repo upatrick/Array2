@@ -147,13 +147,30 @@
             </head>
             <body>
                 <div class="inputBox" id="inner" style="color: azure;"></div>
-                <button onclick="percorrer()" style="--clr: #1e9bff">
-                    <span>Go through</span><i></i>
-                </button>
                 <script>
-                    function percorrer() {
+                    function percorrer(numero) {
+                    let soma = 0;
 
+                    for (let i = 1; i < numero; i++) {
+                        if (numero % i === 0) {
+                        soma += i;
+                        }
                     }
+
+                    return soma === numero;
+                    }
+
+                    const vetor = [];
+                    let contador = 0;
+
+                    for (let i = 1; contador < 4; i++) {
+                        if (percorrer(i)) {
+                            vetor.push(i);
+                            contador++;
+                        }
+                    }
+
+                    inner.innerHTML = `<h1>${vetor}`
                 </script>
                 <!-- 3. Desenvolva um algoritmo que preenche um vetor com os 4
                 primeiros números perfeitos. -->
