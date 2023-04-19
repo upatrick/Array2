@@ -147,16 +147,31 @@
             </head>
             <body>
                 <div class="inputBox" id="inner" style="color: azure;"></div>
-                <button onclick="percorrer()" style="--clr: #1e9bff">
+                <button onclick="vetor()" style="--clr: #1e9bff">
                     <span>Go through</span><i></i>
                 </button>
                 <script>
-                    function percorrer() {
+                    function vetor(vet1,vet2) {
+                        let newVetor = []
 
+                        for(let i = 0; i <= vet1.length; i++) {
+                            newVetor.push(vet1[i]);
+                        }
+                        for(let i = 0; i <= vet2.length; i++) {
+                            newVetor.push(vet2[i]);
+                        }
+                        
+                        return newVetor
                     }
+
+                    let vetor1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+                    let vetor2 = [11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
+                    let vetorUnited = vetor(vetor1, vetor2);
+
+                    inner.innerHTML = `<h1>${vetorUnited}`
                 </script>
-                4. Crie uma função que recebe 2 vetores de 10 elementos inteiros e que
-                retorne a união dos dois em um novo vetor.
+                <!-- 4. Crie uma função que recebe 2 vetores de 10 elementos inteiros e que
+                retorne a união dos dois em um novo vetor. -->
             </body>
         </html>
     </body>
