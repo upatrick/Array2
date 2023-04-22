@@ -147,13 +147,13 @@
             </head>
             <body>
                 <div class="inputBox" id="inner" style="color: azure;"></div>
-                <button onclick="percorrer()" style="--clr: #1e9bff">
-                    <span>Go through</span><i></i>
-                </button>
                 <script>
-                    function percorrer() {
-
+                    function percorrer(vetor, numero) {
+                        return vetor.includes(numero);
                     }
+                    
+                    let meuVetor = [1, 2, 3, 4, 5];
+                    inner.innerHTML = `<h1>${percorrer(meuVetor, 3)}`
                 </script>
                 <!-- 5. Crie uma função que recebe um vetor de inteiros e um número
                 inteiro e retorne verdadeiro se o número faz parte do vetor ou falso
